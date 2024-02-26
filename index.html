@@ -3,36 +3,230 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FAC Portfolio Website - Fahan Ibrahim-Hashi</title>
-        // https://www.canva.com/design/DAF90JI-R3U/nf1Wu51jy5XtrVqYmCZRXg/view?utm_content=DAF90JI-R3U&utm_campaign=designshare&utm_medium=link&utm_source=recording_view
-        
+        <title>FAC Portfolio Website - Fahan Ibrahim-Hashi</title>        
         <style>
-            nav {
-                background-color: #333;
-                overflow: hidden;
+            
+            body {
+                background-color: white;
             }
-
+            
+            nav {
+                overflow: hidden;
+                height: 110px;
+                display: flex; 
+                justify-content: space-around;  
+                align-items: center;
+                border-top: 5px solid #E8D6FF;
+            }
+            
             nav a {
                 float: left;
                 display: block;
-                color: white;
+                color: black;
                 text-align: center;
+                font-family:'proxima-nova', sans-serif;
+                font-weight: bold;
                 padding: 14px 20px;
                 text-decoration: none;
             }
 
             nav a:hover {
-                background-color: #ddd;
+                background-color: #E8D6FF;
                 color: black;
             }
+
+            nav a:nth-child(7) {
+                background-color: #E8D6FF; 
+            }
+
+            nav img {
+                display: block;
+                margin: 0 auto; 
+                padding: 10px 0; 
+                width: 100px; 
+                height: auto; 
+            }
+
+
+            footer {
+                background-color: #E8D6FF;
+                color: #black;
+                padding: 20px; 
+                position: relative; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            footer::before {
+                content: "";
+                position: absolute;
+                top: -1px;
+                left: 0;
+                width: 100%;
+                height: 5px; 
+                background-color: #1D3D2D; 
+            }
+            
+            footer p {
+                display: inline-block;
+                margin: 0 10px; 
+                color: black;
+                text-align: left;
+                font-family:'proxima-nova', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                }
+
+            footer img {
+                display: block;
+                margin: 0 10px 0 0; 
+                width: 100px; 
+                height: auto;
+            }
+
+            header {
+                height: 33vh; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: #F4ECE8;
+            }
+
+            header h1 {
+                margin-bottom: 10px;
+                font-size: 80px;
+                color: #1D3D2D;
+            }
+            
+            h2 {
+                color: #1D3D2D;
+                margin-top: 40px; 
+                margin-bottom: 20px; 
+                font-size: 50px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            h3 { 
+                font-family: 'proxima-nova', sans-serif;
+                font-weight: bold;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            
+            #idea h3, #career h3, #FAC h3 {
+                margin-top: 5px; 
+                font-size: 20px; 
+            }
+
+            p, li { 
+                font-family: 'proxima-nova', sans-serif;
+                color: black;
+            }
+
+            #community, #idea {
+                background-color: #E8D6FF;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #career, #FAC {
+                background-color: #F4ECE8; 
+                display: flex;
+                flex-direction: column;
+            }
+           
+            #FAC {
+                background-color: #F4ECE8;
+            }
+
+            .rounded-image {
+                width: 1000px; 
+                height: auto;
+                border-radius: 2%;
+                margin-bottom: 50px;
+            }
+
+            #about img, #community img {
+                display: block;
+                margin: 0 auto; 
+                margin-bottom: 50px;
+            }
+
+            #idea img {
+                display: block;
+                margin: 0 auto;
+                width: 1000px; 
+                height: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px; 
+            }
+            
+            .sub {
+                flex: 1;
+                background-color: #F4ECE8;
+                border: 4px solid #1D3D2D;
+                border-radius: 15px;
+                padding: 20px;
+                margin-bottom: 40px; 
+            }
+            
+            .inner_box {
+                background-color: #1D3D2D; 
+                color: #F4ECE8; 
+                border-radius: 15px; 
+                padding: 10px; 
+                margin-bottom: 10px; 
+                font-family: 'proxima-nova', sans-serif;
+            }
+            
+            .sub h4 {
+                text-align: center;
+            }
+            
+            .sub ul {
+                display: none; 
+                list-style-type: none;
+                padding-left: 0px;
+                line-height: 1.5; /
+            }
+
+            .sub ul.show {
+                display: block; 
+                }
+            
+            .sub ul li {
+                padding-left: 10px; 
+                margin-bottom: 10px; 
+            }       
 
         </style>
 
     </head>
     <body>
         <nav>
-            <a href="#header">Home</a>
+            <a href="#header">
+                <img src="FIH_LOGO.png" alt="Logo">
+              </a>
+
             <a href="#about">About Me</a>
+            <a href="#community">My Community</a>
             <a href="#career">Web Development</a>
             <a href="#idea">Start-Up Idea</a>
             <a href="#FAC">Why FAC?</a>
@@ -47,80 +241,150 @@
         <main>
             <section id="about">
                 <h2>About Me</h2> 
-                <p><strong>Growing Up</strong></p>
-                <p>I was born in Italy to Somali parents and grew up in the UK</p>
-                <p>My hobbies included playing Volleyball where I volunteered at the Training Venue for the London 2012 Olympic Games, near the FAC offices at the Sobell Leisure Centre in Finsbury Park</p>
-                <p><strong>University</strong></p>
-                <p>I have a BSc in Business Management from King's College London and an MSc in Public Policy from UCL where I focused on behavioural economics</p>
-                <p>That's where my passion for the psychology of personal finance began which was the seed to my start-up idea that led me to FAC</p>
-                <p><strong>Career</strong></p>
-                <p>After graduation, I began a career in investment banking at Citigroup where I spent 7 years</p>
-                <p>Last October, I decided to make a change and reflected on what I wanted to do next</p>
-                <p>I chose to pursue entreprenuership and follow my passion for personal finance</p>
+                <img src="aboutme_pic.png" alt="About Me" class="rounded-image">
+                <div class="container">
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Introduction</h4>
+                        </div>
+                        <ul>
+                            <li>I was born in <strong>Italy</strong> to <strong>Somali</strong> parents and grew up in the <strong>UK</strong></li>
+                            <li>My hobbies included playing <strong>Volleyball</strong> where I volunteered at the Training Venue for the <strong>London 2012 Olympic Games</strong>, near the FAC offices at the Sobell Leisure Centre in <strong>Finsbury Park</strong></li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Study</h4>
+                        </div>
+                        <ul>
+                            <li>I have a <strong>BSc in Business Management</strong> from King's College London and an <strong>MSc in Public Policy</strong> from UCL where I focused on behavioural economics</li>
+                            <li>That's where my passion for the <strong>psychology of personal finance</strong> began which was the seed to my start-up idea that led me to FAC</li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Career</h4>
+                        </div>
+                        <ul>
+                            <li>After graduation, I began a career in <strong>investment banking</strong> at Citigroup where I spent 7 years</li>
+                            <li>Last October, I decided to make a change. After reflecting on what I wanted to do next, I chose to <strong>pursue entreprenuership</strong> and follow my passion for personal finance</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="community">
-                <p><strong>My Community</strong></p>
-                <p>I am currently <strong>Trustee for The Diana Award</strong>, a charity I volunteered with for the past 10 years</p>
-                <p>Since 2015, I have been a <strong>First Aider for St John Ambulance</strong>, where I am able to sign-up to duties at public events on the weekend</p>
-                <p>I am also an <strong>Alumni Mentor SEO London</strong>,a charity which trains students from disadvantaged backgrounds to enter careers in banking and law</p>
+                <h2>My Community</h2>
+                <img src="community_pic.png" alt="My Community" class="rounded-image">
+                <div class="container">
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>The Diana Award</h4>            
+                        </div>
+                        <ul>
+                            <li>I am currently <strong>Trustee for The Diana Award</strong>, a charity I volunteered with for the past 10 years</li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>St John Ambulance</h4>
+                        </div>
+                        <ul>
+                            <li>Since 2015, I have been a <strong>First Aider for St John Ambulance</strong>, where I am able to sign-up to go on duties at public events in London at the weekend</li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>SEO London</h4>
+                        </div>
+                        <ul>
+                            <li>I am also an <strong>Alumni Mentor SEO London</strong>,a charity which trains students from disadvantaged backgrounds to enter careers in banking and law</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="career">
                 <h2>Why Software Development?</h2>
                 <h3>3 motivations</h3>
-                <div class="career_sub">
-                    <p><strong>Pursue Entreprenuership</strong></p>
-                    <p>My business idea is to use Open Banking technology to offer better financial planning to individuals</p>
-                    <p>I want to dedicate time to train as a software developer before building an MVP as I feel it will be important for me to understand the technical aspects</p>
-                </div>
-                <div class="career_sub">
-                    <p><strong>Meet Collaborators</strong></p>
-                    <p>Learning to code alongside others will introduce me to future collaborators and people in similar stages in their entrepreneurial journeys</p>
-                    <p>This is also so I can build my network within the technology industry</p>
-                </div>
-                <div class="career_sub">
-                    <p><strong>Growth Opportunity</strong></p>
-                    <p>One reason I had left my old job was to pursue growth</p>
-                    <p>I want to take the time to learn for the sake of learning before diving into my next project</p>
+                <div class="container">
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Pursue Entreprenuership</h4>
+                        </div>
+                        <ul>
+                            <li>My business idea is to use <strong>Open Banking technology</strong> to offer better financial planning to individuals</li>
+                            <li>I want to dedicate time to train as a software developer before building an MVP as I feel it will be important for me to <strong>understand the technical aspects</strong></li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Meet Collaborators</h4>
+                        </div>
+                        <ul>
+                            <li>Learning to code alongside others will introduce me to future collaborators and <strong>people in similar stages</strong> in their entrepreneurial journeys</li>
+                            <li>This is also so I can <strong>grow my network</strong> within the technology industry</li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Growth Opportunity</h4>
+                        </div>
+                        <ul>
+                            <li>One reason I had left my old job was to <strong>pursue growth</strong></li>
+                            <li>I want to take the <strong>time to learn</strong> for the sake of learning before diving into my next project</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <section id="idea">
-                <h2>Hear My Start-Up Idea</h2>
-                <h3><em>Got 3 minutes?</em> Click the deck to listen to my pitch.</h3>
-                <p>I am preparing to pitch at my old university's start-up competition on the 7th March</p>
+                <h2>My Start-Up Idea</h2>
+                <h3><em>Got 3 minutes?</em> Click the deck to listen to the pitch I prepared for a start-up competition last week.</h3>
+                <p><a target="_blank" href="https://www.canva.com/design/DAF90JI-R3U/nf1Wu51jy5XtrVqYmCZRXg/view?utm_content=DAF90JI-R3U&utm_campaign=designshare&utm_medium=link&utm_source=recording_view"><img src="nisainvest_deck.png" alt="Deck" class="rounded-image"></a></p>
             </section>
 
             <section id="FAC">
                 <h2>Why Founders and Coders?</h2>
                 <h3>3 reasons</h3>
-                <div class="FAC_sub">
-                    <p><strong>Community</strong></p>
-                    <p>FAC welcomes and brings together individuals from different career backgrounds</p>
-                    <p>At the coding meetups, I met previous mentors who have made the switch into technology having studied different subjects at university or pursued a different career</p>
-                </div>
-                <div class="FAC_sub">
-                    <p><strong>Pair-Programming</p></strong>
-                    <p>The emphasis on peer-to-peer learning mirrors how people work together</p>
-                    <p>I often used to discuss with my colleagues in abstract terms and later work in pairs to run analyses together in Excel</p>
-                </div>
-                <div class="FAC_sub">
-                    <p><strong>Dynamic Bootcamp</p></strong>
-                    <p>The Tech for Better projects peaked my interest</p>
-                    <p>I feel that working on these will help me understand how to approach building an MVP for my business idea</p>
+                <div class="container">
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Community</h4>
+                        </div>
+                        <ul>
+                            <li>FAC welcomes and brings together individuals from <strong>different career backgrounds</strong></li>
+                            <li>At the coding meetups, I met <strong>previous mentors</strong> who have made the switch into technology having studied different subjects at university or pursued a different career</li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Pair-Programming</h4>
+                        </div>
+                        <ul>
+                            <li>The emphasis on <strong>peer-to-peer learning</strong> mirrors how people work together</li>
+                            <li>I often used to discuss with my colleagues in abstract terms and later work in pairs to <strong>run analyses together</strong> in Excel</li>
+                        </ul>
+                    </div>
+                    <div class="sub">
+                        <div class="inner_box">
+                            <h4>Dynamic Bootcamp</h4>
+                        </div>
+                        <ul>
+                            <li>The <strong>Tech for Better</strong> projects peaked my interest</li>
+                            <li>I feel that working on these will help me understand how to approach <strong>building an MVP</strong> for my business idea</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
 
         <footer id="contact">
-            <p>Contact Me</p>
-            <p><a target="_blank" href="www.linkedin.com/in/fih">LinkedIn</a></p>
-            <p><a target="_blank" href="https://github.com/fahanibrahimhashi">GitHub</a></p>
+            <p>Find me on:</p>
+            <p><a target="_blank" href="https://www.linkedin.com/in/fih/"><img src="LinkedIn_Logo.png" alt="Logo"></a></p>
+            <p><a target="_blank" href="https://github.com/fahanibrahimhashi"><img src="GitHub_Logo.png" alt="Logo"></a></p>
         </footer>
         
-
-
         <script>
               document.querySelectorAll('nav a').forEach(anchor => {
               anchor.addEventListener('click', function(e) {
@@ -135,8 +399,19 @@
                 });
               });
             });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const innerBoxes = document.querySelectorAll('.inner_box');
+                
+                innerBoxes.forEach(box => {
+                    box.addEventListener('click', function() {
+                        const careerSub = this.parentNode;
+                        const ul = careerSub.querySelector('ul');
+                        ul.classList.toggle('show');
+                    });
+                });
+            });
           </script>
           
     </body>
     </html>
-
